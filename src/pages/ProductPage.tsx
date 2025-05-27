@@ -13,9 +13,9 @@ const products = {
     price: 99,
     originalPrice: 129,
     images: [
-      "https://placehold.co/800x800/green/white?text=基础版1",
-      "https://placehold.co/800x800/green/white?text=基础版2",
-      "https://placehold.co/800x800/green/white?text=基础版3",
+      "https://images.unsplash.com/photo-1570831739435-6601aa3fa4fb?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=800&h=800&fit=crop",
     ],
     details:
       "大麦青汁基础版是从优质大麦草中提取的天然饮品，富含叶绿素、膳食纤维、维生素和矿物质。每一份都经过严格的品质控制，确保您获得最佳的营养价值。适合日常饮用，帮助提高身体免疫力，增强活力。",
@@ -31,9 +31,9 @@ const products = {
     price: 129,
     originalPrice: 159,
     images: [
-      "https://placehold.co/800x800/darkgreen/white?text=高级版1",
-      "https://placehold.co/800x800/darkgreen/white?text=高级版2",
-      "https://placehold.co/800x800/darkgreen/white?text=高级版3",
+      "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1638176066666-ffb2f013c7dd?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1609501676725-7186f52c2791?w=800&h=800&fit=crop",    
     ],
     details:
       "大麦青汁高级版在基础版的配方上增加了多种水果精华，不仅提高了口感，还增加了更多的维生素和抗氧化物质。特别添加的苹果和蜂蜜成分，使得口感更加顺滑，适合对味道有较高要求的消费者。",
@@ -49,9 +49,9 @@ const products = {
     price: 239,
     originalPrice: 299,
     images: [
-      "https://placehold.co/800x800/olivedrab/white?text=家庭装1",
-      "https://placehold.co/800x800/olivedrab/white?text=家庭装2",
-      "https://placehold.co/800x800/olivedrab/white?text=家庭装3",
+      "https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=800&fit=crop",
     ],
     details:
       "大麦青汁家庭装提供30袋装的大容量包装，基于我们经典的配方，适合全家人日常饮用。这款经济实惠的包装让您可以与家人一起分享健康生活方式，共同享受大麦青汁带来的健康益处。",
@@ -67,9 +67,9 @@ const products = {
     price: 299,
     originalPrice: 359,
     images: [
-      "https://placehold.co/800x800/lightgreen/black?text=礼盒装1",
-      "https://placehold.co/800x800/lightgreen/black?text=礼盒装2",
-      "https://placehold.co/800x800/lightgreen/black?text=礼盒装3",
+      "https://images.unsplash.com/photo-1517373116369-0bdb5619bd51?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1609501676725-7186f52c2791?w=800&h=800&fit=crop",
     ],
     details:
       "大麦青汁礼盒装采用高档包装设计，内含20袋我们的高级版大麦青汁和一个精美的专用搅拌杯。这款礼盒是送给亲友、商业伙伴或重要客户的理想健康礼品，展现您对他们健康的关心和重视。",

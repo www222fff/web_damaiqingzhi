@@ -51,7 +51,7 @@ export default function AboutPage() {
           </div>
           <div className="order-1 md:order-2">
             <img
-              src="https://placehold.co/800x1000/green/white?text=我们的团队"
+              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&h=700&fit=crop"
               alt="我们的团队"
               className="rounded-lg object-cover shadow-lg"
             />
@@ -120,30 +120,66 @@ export default function AboutPage() {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((id) => (
-            <div key={id} className="text-center">
+          {[
+            {
+              id: 1,
+              name: "张博士",
+              role: "创始人兼CEO",
+              image: "https://randomuser.me/api/portraits/men/32.jpg",
+            },
+            {
+              id: 2,
+              name: "李教授",
+              role: "首席营养学家",
+              image: "https://randomuser.me/api/portraits/women/65.jpg",
+            },
+            {
+              id: 3,
+              name: "王主任",
+              role: "产品研发总监",
+              image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
+            },
+            {
+              id: 4,
+              name: "陈经理",
+              role: "质量控制经理",
+              image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+            },
+            {
+              id: 5,
+              name: "王女士",
+              role: "市场总监",
+              image: "/images/wang.jpg",
+            },
+            {
+              id: 6,
+              name: "杨主管",
+              role: "客户服务主管",
+              image: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=300&h=300&fit=crop&crop=face",
+            },
+            {
+              id: 7,
+              name: "赵经理",
+              role: "供应链经理",
+              image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=300&h=300&fit=crop&crop=face",
+            },
+            {
+              id: 8,
+              name: "孙顾问",
+              role: "健康顾问",
+              image: "https://randomuser.me/api/portraits/men/33.jpg",
+            },
+          ].map((member) => (
+            <div key={member.id} className="text-center">
               <div className="mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full">
                 <img
-                  src={`https://placehold.co/300x300/green/white?text=团队${id}`}
-                  alt={`团队成员 ${id}`}
+                  src={member.image}
+                  alt={`团队成员 ${member.name}`}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mb-1 font-semibold">张三{id}</h3>
-              <p className="text-sm text-muted-foreground">
-                {
-                  [
-                    "创始人兼CEO",
-                    "首席营养学家",
-                    "产品研发总监",
-                    "质量控制经理",
-                    "市场总监",
-                    "客户服务主管",
-                    "供应链经理",
-                    "健康顾问",
-                  ][id - 1]
-                }
-              </p>
+              <h3 className="mb-1 font-semibold">{member.name}</h3>
+              <p className="text-sm text-muted-foreground">{member.role}</p>
             </div>
           ))}
         </div>

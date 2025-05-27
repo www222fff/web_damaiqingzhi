@@ -31,9 +31,16 @@ export function ProductCard({
     <Card className="overflow-hidden transition-all hover:shadow-md">
       <div className="aspect-square overflow-hidden">
         <img
-          src={image}
+          src={
+            image ||
+            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+          }
           alt={name}
           className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          onError={(e) => {
+            e.currentTarget.src =
+              "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80";
+          }}
         />
       </div>
       <CardHeader className="p-4">

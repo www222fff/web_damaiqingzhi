@@ -7,9 +7,49 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">大麦青汁</h3>
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
+              alt="品牌logo"
+              className="w-20 h-20 object-cover rounded-full mb-2"
+            />
             <p className="text-sm text-muted-foreground">
-              源自自然的健康��量，每一天的绿色活力。
+              源自自然的健康能量，每一天的绿色活力。
             </p>
+            <div className="flex gap-2 mt-2">
+              <a
+                href="https://weibo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                  alt="Weibo"
+                  className="w-6 h-6"
+                />
+              </a>
+              <a
+                href="https://wechat.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                  alt="WeChat"
+                  className="w-6 h-6"
+                />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                  alt="Instagram"
+                  className="w-6 h-6"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="space-y-3">

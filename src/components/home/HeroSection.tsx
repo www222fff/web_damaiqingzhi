@@ -17,10 +17,10 @@ export function HeroSection() {
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
               <Button size="lg" asChild>
-                <Link to="/products">立���购买</Link>
+                <Link to="/products">立即购买</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/benefits">���解更多</Link>
+                <Link to="/benefits">了解更多</Link>
               </Button>
             </div>
             <div className="flex items-center gap-4">
@@ -31,8 +31,8 @@ export function HeroSection() {
                     className="h-10 w-10 overflow-hidden rounded-full border-2 border-white"
                   >
                     <img
-                      src={`https://placehold.co/200x200/green/white?text=${id}`}
-                      alt="User avatar"
+                      src={`https://randomuser.me/api/portraits/men/${id + 30}.jpg`}
+                      alt="用户头像"
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -45,7 +45,7 @@ export function HeroSection() {
           </div>
           <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[400px] lg:h-[500px]">
             <img
-              src="https://placehold.co/800x800/green/white?text=大麦青汁"
+              src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
               alt="大麦青汁产品展示"
               className="h-full w-full object-cover"
             />

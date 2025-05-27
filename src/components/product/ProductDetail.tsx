@@ -56,9 +56,16 @@ export function ProductDetail({
                 onClick={() => setSelectedImageIndex(index)}
               >
                 <img
-                  src={image}
+                  src={
+                    image ||
+                    "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                  }
                   alt={`${name} - view ${index + 1}`}
                   className="h-20 w-20 object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src =
+                      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80";
+                  }}
                 />
               </div>
             ))}

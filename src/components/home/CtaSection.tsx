@@ -20,14 +20,6 @@ export function CtaSection() {
             >
               <Link to="/products">立即购买</Link>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-green-700"
-              asChild
-            >
-              <Link to="/contact">联系客服</Link>
-            </Button>
           </div>
         </div>
       </div>

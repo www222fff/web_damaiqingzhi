@@ -10,7 +10,7 @@ const products = [
     description: "纯天然大麦草精华，每日健康饮品",
     price: 99,
     originalPrice: 129,
-    image: "https://placehold.co/600x600/green/white?text=基础版",
+    image: "https://images.unsplash.com/photo-1570831739435-6601aa3fa4fb?w=600&h=600&fit=crop",
   },
   {
     id: "2",
@@ -18,7 +18,7 @@ const products = [
     description: "添加多种水果精华，口感更佳",
     price: 129,
     originalPrice: 159,
-    image: "https://placehold.co/600x600/darkgreen/white?text=高级版",
+    image: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&h=600&fit=crop",
   },
   {
     id: "3",
@@ -26,7 +26,7 @@ const products = [
     description: "30袋大容量，全家共享健康",
     price: 239,
     originalPrice: 299,
-    image: "https://placehold.co/600x600/olivedrab/white?text=家庭装",
+    image: "https://images.unsplash.com/photo-1517373116369-0bdb5619bd51?w=600&h=600&fit=crop",
   },
   {
     id: "4",

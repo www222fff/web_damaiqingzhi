@@ -98,9 +98,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="mb-2 font-medium">联系电话</h3>
                     <p className="text-sm text-muted-foreground">
-                      客服热线: 400-123-4567
-                      <br />
-                      商务合作: 021-8765-4321
+                      客服热线: 086-139-64938594
                       <br />
                       工作时间: 周一至周五 9:00-18:00
                     </p>
