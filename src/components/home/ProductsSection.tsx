@@ -26,7 +26,7 @@ const products = [
     description: "30袋大容量，全家共享健康",
     price: 239,
     originalPrice: 299,
-    image: "https://images.unsplash.com/photo-1517373116369-0bdb5619bd51?w=600&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=600&h=600&fit=crop",
   },
   {
     id: "4",
@@ -34,7 +34,7 @@ const products = [
     description: "精美包装，送礼佳选",
     price: 299,
     originalPrice: 359,
-    image: "https://placehold.co/600x600/lightgreen/black?text=礼盒装",
+    image: "https://images.unsplash.com/photo-1517373116369-0bdb5619bd51?w=600&h=600&fit=crop",
   },
 ];
 
