@@ -51,7 +51,7 @@ export default function AboutPage() {
           </div>
           <div className="order-1 md:order-2">
             <img
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&h=700&fit=crop"
+              src="/images/group.jpg"
               alt="我们的团队"
               className="rounded-lg object-cover shadow-lg"
             />
@@ -74,7 +74,7 @@ export default function AboutPage() {
             <div className="rounded-lg bg-white p-6 shadow-md">
               <h3 className="mb-4 text-xl font-semibold">品质第一</h3>
               <p>
-                我们坚持使用最优质的原材料，采用先进的生产工艺，确保每一款产品都达到最高标准。我们的生产过程符合严格的质量控制体系，每批产品都经过多重检测，确保安全可靠。
+                我们坚持使用最优质的���材料，采用先进的生产工艺，确保每一款产品都达到最高标准。我们的生产过程符合严格的质量控制体系，每批产品都经过多重检测，确保安全可靠。
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <div className="rounded-lg bg-white p-6 shadow-md">
               <h3 className="mb-4 text-xl font-semibold">客户至上</h3>
               <p>
-                我们始终将客户的需求和反馈放在首位。我们不断优化产品和服务，提供专业的健康咨询，建立长期的客户关系，帮助客户实现健康目标。
+                我们始终将客户的需求和反馈放在首位。我们不断优化产品和服务，���供专业的健康咨询，建立长期的客户关系，帮助客户实现健康目标。
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">
@@ -121,60 +121,20 @@ export default function AboutPage() {
 
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {[
-            {
-              id: 1,
-              name: "张博士",
-              role: "创始人兼CEO",
-              image: "https://randomuser.me/api/portraits/men/32.jpg",
-            },
-            {
-              id: 2,
-              name: "李教授",
-              role: "首席营养学家",
-              image: "https://randomuser.me/api/portraits/women/65.jpg",
-            },
-            {
-              id: 3,
-              name: "王主任",
-              role: "产品研发总监",
-              image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
-            },
-            {
-              id: 4,
-              name: "陈经理",
-              role: "质量控制经理",
-              image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-            },
-            {
-              id: 5,
-              name: "王女士",
-              role: "市场总监",
-              image: "/images/wang.jpg",
-            },
-            {
-              id: 6,
-              name: "杨主管",
-              role: "客户服务主管",
-              image: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=300&h=300&fit=crop&crop=face",
-            },
-            {
-              id: 7,
-              name: "赵经理",
-              role: "供应链经理",
-              image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=300&h=300&fit=crop&crop=face",
-            },
-            {
-              id: 8,
-              name: "孙顾问",
-              role: "健康顾问",
-              image: "https://randomuser.me/api/portraits/men/33.jpg",
-            },
+            { id: 1, name: "张博士", role: "创始人兼CEO", image: "/images/member1.jpg" },
+            { id: 2, name: "李教授", role: "首席营养学家", image: "/images/member2.jpg" },
+            { id: 3, name: "王主任", role: "产品研发总监", image: "/images/member3.jpg" },
+            { id: 4, name: "陈经理", role: "质量控制经理", image: "/images/member4.jpg" },
+            { id: 5, name: "王女士", role: "市场总监", image: "/images/wang.jpg" },
+            { id: 6, name: "杨主管", role: "客户服务主管", image: "/images/member6.jpg" },
+            { id: 7, name: "赵经理", role: "供应链经理", image: "/images/member7.jpg" },
+            { id: 8, name: "孙顾问", role: "健康顾问", image: "/images/member8.jpg" },
           ].map((member) => (
             <div key={member.id} className="text-center">
               <div className="mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full">
                 <img
                   src={member.image}
-                  alt={`团队成员 ${member.name}`}
+                  alt={`${member.name} - ${member.role}`}
                   className="h-full w-full object-cover"
                 />
               </div>

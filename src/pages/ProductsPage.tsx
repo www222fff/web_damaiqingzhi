@@ -21,7 +21,7 @@ const allProducts = [
     description: "纯天然大麦草精华，每日健康饮品",
     price: 99,
     originalPrice: 129,
-    image: "https://images.unsplash.com/photo-1570831739435-6601aa3fa4fb?w=600&h=600&fit=crop",
+    image: "/images/product1.jpg",
     category: "基础系列",
   },
   {
@@ -30,7 +30,7 @@ const allProducts = [
     description: "添加多种水果精华，口感更佳",
     price: 129,
     originalPrice: 159,
-    image: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&h=600&fit=crop",
+    image: "/images/product2.jpg",
     category: "高级系列",
   },
   {
@@ -39,7 +39,7 @@ const allProducts = [
     description: "30袋大容量，全家共享健康",
     price: 239,
     originalPrice: 299,
-    image: "https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=600&h=600&fit=crop",
+    image: "/images/product3.jpg",
     category: "家庭系列",
   },
   {
@@ -48,7 +48,7 @@ const allProducts = [
     description: "精美包装，送礼佳选",
     price: 299,
     originalPrice: 359,
-    image: "https://images.unsplash.com/photo-1517373116369-0bdb5619bd51?w=600&h=600&fit=crop",
+    image: "/images/product4.jpg",
     category: "礼品系列",
   },
 ];
