@@ -36,6 +36,10 @@ export function ProductDetail({
   const decreaseQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   const handleOrder = async () => {
+    if (!contact.trim()) {
+      setContact('请填写联系方式');
+      return;
+    }
     setSubmitting(true);
     setSuccess(false);
     try {
@@ -50,7 +54,11 @@ export function ProductDetail({
         }),
       });
       setSuccess(true);
-      setTimeout(() => setSuccess(false), 2000);
+      setContact('下单成功！');
+      setTimeout(() => {
+        setSuccess(false);
+        setContact("");
+      }, 2000);
     } catch (e) {
       // 可选：处理错误
     }
@@ -150,6 +158,7 @@ export function ProductDetail({
                 value={contact}
                 onChange={e => setContact(e.target.value)}
                 disabled={submitting}
+                style={success || contact === '请填写联系方式' ? { color: contact === '请填写联系方式' ? 'red' : 'green', fontWeight: 'bold' } : {}}
               />
             </div>
             <div className="flex gap-2">
@@ -164,9 +173,6 @@ export function ProductDetail({
                 <Share2 className="h-5 w-5" />
               </Button>
             </div>
-            {success && (
-              <div className="text-green-600 text-xs mt-2">下单成功！</div>
-            )}
           </div>
 
           <div className="space-y-4">

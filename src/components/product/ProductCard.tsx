@@ -36,6 +36,10 @@ export function ProductCard({
 
   // 新增：下单处理函数，调用 /api/orders
   const handleOrder = async () => {
+    if (!contact.trim()) {
+      setContact('请填写联系方式');
+      return;
+    }
     setSubmitting(true);
     setSuccess(false);
     try {
@@ -50,7 +54,11 @@ export function ProductCard({
         }),
       });
       setSuccess(true);
-      setTimeout(() => setSuccess(false), 2000);
+      setContact('下单成功！');
+      setTimeout(() => {
+        setSuccess(false);
+        setContact("");
+      }, 2000);
     } catch (e) {
       // 可选：处理错误
     }
@@ -96,8 +104,9 @@ export function ProductCard({
             className="w-full border rounded px-2 py-1 text-sm"
             placeholder="请输入联系方式（手机号/微信/邮箱）"
             value={contact}
-            onChange={(e) => setContact(e.target.value)}
+            onChange={e => setContact(e.target.value)}
             disabled={submitting}
+            style={success || contact === '请填写联系方式' ? { color: contact === '请填写联系方式' ? 'red' : 'green', fontWeight: 'bold' } : {}}
           />
         </div>
       </CardContent>
@@ -133,9 +142,7 @@ export function ProductCard({
             <ShoppingCart className="h-4 w-4" />
           </Button>
         </div>
-        {success && (
-          <div className="text-green-600 text-xs mt-2">下单成功！</div>
-        )}
+        {/* 下单成功提示区域已由输入框高亮和内容提示替代，无需再渲染此区域 */}
       </CardFooter>
     </Card>
   );
