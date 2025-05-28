@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 interface ProductCardProps {
   id: string;
@@ -27,6 +28,35 @@ export function ProductCard({
   originalPrice,
   image,
 }: ProductCardProps) {
+  // 新增：本地状态用于反馈
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [contact, setContact] = useState("");
+
+  // 新增：下单处理函数，调用 /api/orders
+  const handleOrder = async () => {
+    setSubmitting(true);
+    setSuccess(false);
+    try {
+      await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          product: name,
+          num: quantity,
+          contact,
+          orderdata: JSON.stringify({ id, price, originalPrice, image }),
+        }),
+      });
+      setSuccess(true);
+      setTimeout(() => setSuccess(false), 2000);
+    } catch (e) {
+      // 可选：处理错误
+    }
+    setSubmitting(false);
+  };
+
   return (
     <Card className="overflow-hidden transition-all hover:shadow-md">
       <div className="aspect-square overflow-hidden">
@@ -60,16 +90,52 @@ export function ProductCard({
             </span>
           )}
         </div>
+        <div className="mt-2">
+          <input
+            type="text"
+            className="w-full border rounded px-2 py-1 text-sm"
+            placeholder="请输入联系方式（手机号/微信/邮箱）"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+            disabled={submitting}
+          />
+        </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <div className="flex w-full gap-2">
+        <div className="flex w-full gap-2 items-center">
           <Button asChild className="flex-1">
             <Link to={`/products/${id}`}>查看详情</Link>
           </Button>
-          <Button variant="outline" size="icon">
+          <div className="flex items-center gap-1">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+              disabled={quantity <= 1}
+            >
+              -
+            </Button>
+            <span className="w-8 text-center select-none">{quantity}</span>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setQuantity((q) => q + 1)}
+            >
+              +
+            </Button>
+          </div>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handleOrder}
+            disabled={submitting}
+          >
             <ShoppingCart className="h-4 w-4" />
           </Button>
         </div>
+        {success && (
+          <div className="text-green-600 text-xs mt-2">下单成功！</div>
+        )}
       </CardFooter>
     </Card>
   );

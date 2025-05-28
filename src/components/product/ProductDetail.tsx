@@ -16,6 +16,7 @@ interface ProductDetailProps {
 }
 
 export function ProductDetail({
+  id,
   name,
   description,
   price,
@@ -27,10 +28,34 @@ export function ProductDetail({
 }: ProductDetailProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [contact, setContact] = useState("");
 
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
-  const decreaseQuantity = () =>
-    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  const decreaseQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+
+  const handleOrder = async () => {
+    setSubmitting(true);
+    setSuccess(false);
+    try {
+      await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          product: name,
+          num: quantity,
+          contact,
+          orderdata: JSON.stringify({ id, price, originalPrice, images }),
+        }),
+      });
+      setSuccess(true);
+      setTimeout(() => setSuccess(false), 2000);
+    } catch (e) {
+      // 可选：处理错误
+    }
+    setSubmitting(false);
+  };
 
   return (
     <div className="container py-8 md:py-12">
@@ -117,10 +142,20 @@ export function ProductDetail({
                 </Button>
               </div>
             </div>
+            <div className="mt-2">
+              <input
+                type="text"
+                className="w-full border rounded px-2 py-1 text-sm"
+                placeholder="请输入联系方式（手机号/微信/邮箱）"
+                value={contact}
+                onChange={e => setContact(e.target.value)}
+                disabled={submitting}
+              />
+            </div>
             <div className="flex gap-2">
-              <Button className="flex-1 gap-2" size="lg">
+              <Button className="flex-1 gap-2" size="lg" onClick={handleOrder} disabled={submitting}>
                 <ShoppingCart className="h-4 w-4" />
-                加入购物车
+                下单
               </Button>
               <Button variant="outline" size="icon" className="h-11 w-11">
                 <Heart className="h-5 w-5" />
@@ -129,6 +164,9 @@ export function ProductDetail({
                 <Share2 className="h-5 w-5" />
               </Button>
             </div>
+            {success && (
+              <div className="text-green-600 text-xs mt-2">下单成功！</div>
+            )}
           </div>
 
           <div className="space-y-4">
