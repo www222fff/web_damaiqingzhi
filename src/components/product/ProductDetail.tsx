@@ -43,6 +43,7 @@ export function ProductDetail({
     setSubmitting(true);
     setSuccess(false);
     try {
+      const orderDate = new Date().toISOString();
       await fetch('/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -50,7 +51,7 @@ export function ProductDetail({
           product: name,
           num: quantity,
           contact,
-          orderdata: JSON.stringify({ id, price, originalPrice, images }),
+          orderdata: JSON.stringify({ orderDate }),
         }),
       });
       setSuccess(true);
