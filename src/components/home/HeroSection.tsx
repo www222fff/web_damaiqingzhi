@@ -43,14 +43,14 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-lg flex items-center justify-center bg-black h-[220px] md:h-[350px] lg:h-[400px]">
+          <div className="relative overflow-hidden rounded-lg flex items-center justify-center bg-black h-[220px] md:h-[400px] lg:h-[600px]">
             <video
               src="/images/farmer.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
               poster="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
             />
           </div>
