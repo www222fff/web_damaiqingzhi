@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="mb-2 font-medium">联系电话</h3>
                     <p className="text-sm text-muted-foreground">
-                      客服热线: 086-139-64938594
+                      客服热线: 086-15020782726
                       <br />
                       工作时间: 周一至周五 9:00-18:00
                     </p>
@@ -112,11 +112,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="mb-2 font-medium">电子邮箱</h3>
                     <p className="text-sm text-muted-foreground">
-                      客户服务: service@damaigreen.com
-                      <br />
-                      商务合作: business@damaigreen.com
-                      <br />
-                      媒体咨询: media@damaigreen.com
+                      客户服务: 705701550@qq.com
                     </p>
                   </div>
                 </div>
