@@ -50,7 +50,7 @@ export function HeroSection() {
               loop
               muted
               playsInline
-              className="h-full w-full object-cover"
+              className="h-full w-auto max-w-full object-cover"
               poster="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
             />
           </div>
