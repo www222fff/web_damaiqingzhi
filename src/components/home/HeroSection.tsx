@@ -43,16 +43,20 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[600px] lg:h-[500px] flex items-center justify-center">
+          <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[600px] lg:h-[500px] flex items-center justify-center bg-black">
             <video
               src="/images/farmer.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="h-full w-auto max-w-full object-cover"
+              className="h-full w-full object-contain"
               poster="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
+              style={{ filter: 'brightness(0.7)' }}
             />
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="text-white text-2xl md:text-4xl font-bold drop-shadow-lg select-none">大麦青汁原料产地实拍</span>
+            </div>
           </div>
         </div>
       </div>
