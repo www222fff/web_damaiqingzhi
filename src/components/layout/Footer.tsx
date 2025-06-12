@@ -116,10 +116,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold">联系我们</h3>
             <address className="not-italic">
               <p className="text-sm text-muted-foreground">
-                客服电话: 400-123-4567
-              </p>
-              <p className="text-sm text-muted-foreground">
-                邮箱: contact@damaigreen.com
+                邮箱: 705701550@qq.com
               </p>
             </address>
           </div>
