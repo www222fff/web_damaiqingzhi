@@ -44,10 +44,14 @@ export function HeroSection() {
             </div>
           </div>
           <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[400px] lg:h-[500px]">
-            <img
-              src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
-              alt="大麦青汁产品展示"
+            <video
+              src="/images/farmer.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="h-full w-full object-cover"
+              poster="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
             />
           </div>
         </div>
