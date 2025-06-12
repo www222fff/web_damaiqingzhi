@@ -43,7 +43,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-lg flex items-center justify-center bg-black h-[220px] md:h-[400px] lg:h-[400px]">
+          <div className="relative overflow-hidden rounded-lg flex items-center justify-center bg-black h-[220px] md:h-[400px] lg:h-[500px]">
             <video
               src="/images/farmer.mp4"
               autoPlay
