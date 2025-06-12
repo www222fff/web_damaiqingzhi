@@ -43,15 +43,16 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[600px] lg:h-[500px]">
+          <div className="relative h-[300px] overflow-hidden rounded-lg md:h-[600px] lg:h-[500px] flex items-center justify-center">
             <video
               src="/images/farmer.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="h-full w-full object-cover"
+              className="h-full w-auto max-w-full object-contain bg-black"
               poster="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=800&h=800&fit=crop"
+              style={{ backgroundColor: '#000' }}
             />
           </div>
         </div>
